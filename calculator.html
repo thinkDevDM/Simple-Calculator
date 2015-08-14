@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Calculator</title>
+	<style>
+		body {
+			background: #E6E7E8;
+		}
+		#calc-contain {
+			background: #353738;
+			position: relative;
+			width: 300px;
+			border: 1px solid #5C5E5E;
+			border-radius: 5px;
+			box-shadow: 4px 6px #9DA0A1;
+			margin: 300px auto;
+		}
+		#calc-bottom {
+			margin-top: 20px;
+		}
+		input[type="button"] {
+			background: #ccc;
+			width: 20%;
+			font-size: 20px;
+			font-weight: bold;
+			margin: 2%;
+			border-radius: 5px;
+			color: #333;
+		}
+		input[type="text"] {
+			position: relative;
+			display: block;
+			width: 90%;
+			margin: 10px auto 0;
+			padding-left: 4px;
+			font-size: 20px;
+			border-radius: 5px;
+			color: #099;
+		}
+		.red {
+			background: #DE4053 !important;
+			color: #ccc !important;
+		}
+		.white {
+			background: #EBF0F2 !important;
+			color: #333 !important;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="calc-contain">
+		<form name="calculator">
+			<!-- displays text and answer -->
+			<input type="text" name="answer">
+			<br>
+
+			<!-- this code is the core of the calculator operation -->
+			<input type="button" value=" 1 " onclick="calculator.answer.value += '1'">
+			<input type="button" value=" 2 " onclick="calculator.answer.value += '2'">
+			<input type="button" value=" 3 " onclick="calculator.answer.value += '3'">
+			<input type="button" value=" + " class="red" onclick="calculator.answer.value += '+'">
+			<br>
+
+			<input type="button" value=" 4 " onclick="calculator.answer.value += '4'">
+			<input type="button" value=" 5 " onclick="calculator.answer.value += '5'">
+			<input type="button" value=" 6 " onclick="calculator.answer.value += '6'">
+			<input type="button" value=" - " class="red" onclick="calculator.answer.value += '-'">
+			<br>
+
+			<input type="button" value=" 7 " onclick="calculator.answer.value += '7'">
+			<input type="button" value=" 8 " onclick="calculator.answer.value += '8'">
+			<input type="button" value=" 9 " onclick="calculator.answer.value += '9'">
+			<input type="button" value=" x " class="red" onclick="calculator.answer.value += '*'">
+			<br>
+
+			<input type="button" value=" c " class="white" onclick="calculator.answer.value = ''">
+			<input type="button" value=" 0 " onclick="calculator.answer.value += '0'">
+			<input type="button" value=" = " class="white" onclick="calculator.answer.value = eval(calculator.answer.value)">
+			<input type="button" value=" / " class="red" onclick="calculator.answer.value += '/'">
+			<br>
+
+			<div id="calc-bottom"></div>
+		</form>
+	</div><!-- /#calc-contain -->
+
+</body>
+</html>
